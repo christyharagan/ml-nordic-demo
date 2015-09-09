@@ -2,6 +2,8 @@ var UServicesPlugin = require('markscript-uservices').UServicesPlugin
 var logicRuleSet = require('./lib/logicRuleSet').logicRuleSet
 var path = require('path')
 var databaseModel = require('./lib/databaseModel').databaseModel
+var test = require('./test/test').test
+var loadData = require('./example/loadData').loadData
 
 var COMMON = {
   appName: 'ml-nordic-demo',
@@ -16,8 +18,6 @@ var COMMON = {
     port: 8080
   }
 }
-
-exports.COMMON = COMMON
 
 exports.buildOptions = {
   database: {
@@ -39,18 +39,22 @@ exports.buildOptions = {
     uservices: [UServicesPlugin, {}]
   }
 }
-//
-// export function runOptions(buildOptions) {
-//   return {
-//     database: {
-//       host: COMMON.ml.host,
-//       port: COMMON.ml.port,
-//       user: COMMON.ml.user,
-//       password: COMMON.ml.password,
-//       databaseName: COMMON.appName + '-content'
-//     },
-//     middle: COMMON.koa,
-//     serviceSpecs: buildOptions.plugins['uservices'].serviceSpecs,
-//     fileServerPath: path.join(__dirname, '../client')
-//   }
-// }
+
+exports.runOptions = {
+  database: {
+    databaseName: COMMON.appName + '-content',
+    host: COMMON.ml.host,
+    port: COMMON.ml.port,
+    user: COMMON.ml.user,
+    password: COMMON.ml.password
+  }, middle: {
+    host: COMMON.koa.host,
+    port: COMMON.koa.port,
+    fileServerPath: path.join('../client')
+  }
+}
+
+exports.tasks = {
+  test: test,
+  loadData: loadData
+}

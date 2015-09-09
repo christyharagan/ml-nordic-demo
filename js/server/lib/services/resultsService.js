@@ -1,5 +1,5 @@
 import {AbstractMLService, Doc, resolve} from 'markscript-uservices'
-import {Counter} from 'markscript'
+import {Counter} from 'markscript-core'
 
 export class ResultsService extends AbstractMLService {
   updateResults() {

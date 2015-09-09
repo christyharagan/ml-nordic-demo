@@ -1,7 +1,7 @@
 import {Statement, StatementKind, Proposition, toString, UnaryStatement, BinaryStatement} from '../models/statement'
 import {Answer} from '../models/answer'
 import {mlService, mlMethod, resolve, METHOD} from 'markscript-uservices'
-import {createCounter, deleteAll, deleteGraph} from 'markscript'
+import {createCounter, deleteAll, deleteGraph} from 'markscript-core'
 
 @mlService('preperation')
 export class PreperationService {

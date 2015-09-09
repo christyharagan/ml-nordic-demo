@@ -1,4 +1,4 @@
-import {ServerSpec, DatabaseSpec, mlDeploy, contentDatabase, triggersDatabase, modulesDatabase, schemaDatabase, mlRuleSet, BuildOptions} from 'markscript'
+import {ServerSpec, DatabaseSpec, mlDeploy, contentDatabase, triggersDatabase, modulesDatabase, schemaDatabase, mlRuleSet, BuildOptions} from 'markscript-core'
 import {rule, variable, prefix} from 'speckle'
 import {buildOptions} from '../markscriptfile'
 
@@ -55,7 +55,7 @@ export class MLNordicDemo {
   @mlRuleSet({
     path: '/rules/logic.rules'
   })
-  customerRuleSet(): string {
+  logicRuleSet(): string {
     let logic = prefix('l', 'http://logic/')
     let a = variable('a')
     let b = variable('b')

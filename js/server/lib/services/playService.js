@@ -1,7 +1,7 @@
 import {StatementKind, toString} from '../models/statement'
 import {resolve, resolveIterator, METHOD} from 'markscript-uservices'
 import {variable, prefix, select} from 'speckle'
-import {incrementCounter} from 'markscript'
+import {incrementCounter} from 'markscript-core'
 
 export class PlayService {
   getPremises() {

@@ -100,8 +100,8 @@
       "name": "/_alerts/ml-nordic-demo-database/lib/services/resultsService/ResultsService/updateResults",
       "code": ""
     },
-    "markscript": {
-      "name": "markscript",
+    "markscript-core": {
+      "name": "markscript-core",
       "code": ""
     },
     "speckle": {
@@ -143,6 +143,7 @@
       "code": ""
     }
   },
+  "tasks": {},
   "alerts": {
     "results-updateResults": {
       "name": "results-updateResults",

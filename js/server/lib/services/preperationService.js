@@ -1,6 +1,6 @@
 import {StatementKind, toString} from '../models/statement'
 import {resolve, METHOD} from 'markscript-uservices'
-import {createCounter, deleteAll, deleteGraph} from 'markscript'
+import {createCounter, deleteAll, deleteGraph} from 'markscript-core'
 
 export class PreperationService {
   clear() {

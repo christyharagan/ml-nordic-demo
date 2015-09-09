@@ -2,7 +2,7 @@ import {Statement, StatementKind, Proposition, toString, UnaryStatement, BinaryS
 import {Answer} from '../models/answer'
 import {mlService, mlMethod, resolve, resolveIterator, METHOD} from 'markscript-uservices'
 import {variable, prefix, select} from 'speckle'
-import {incrementCounter} from 'markscript'
+import {incrementCounter} from 'markscript-core'
 
 @mlService('play')
 export class PlayService {

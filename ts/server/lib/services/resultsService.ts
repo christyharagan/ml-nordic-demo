@@ -1,6 +1,6 @@
 import {mlService, mlEvent, mlMethod, AbstractMLService, Doc, resolve} from 'markscript-uservices'
 import {Observable} from 'uservices'
-import {Counter} from 'markscript'
+import {Counter} from 'markscript-core'
 
 export interface Results {
   [answerId: number]: number

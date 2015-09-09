@@ -1,34 +1,9 @@
 import {Server} from 'markscript-koa'
-import {COMMON} from './markscriptfile'
-import {MLServices} from 'markscript-uservices'
 import {PlayService} from './lib/services/playService'
 import {PreperationService} from './lib/services/preperationService'
 import {Answer} from './lib/models/answer'
 import {Statement} from './lib/models/statement'
 import {ResultsService} from './lib/services/resultsService'
-import * as u from 'uservices'
-import * as fs from 'fs'
-import * as path from 'path'
-
-let serviceSpecs = <MLServices>u.parse(fs.readFileSync('./deployed/service-specs.json').toString())
-
-export function getServer(port?: number) {
-  let server = new Server({
-    database: {
-      databaseName: COMMON.appName + '-content',
-      host: COMMON.ml.host,
-      port: COMMON.ml.port,
-      user: COMMON.ml.user,
-      password: COMMON.ml.password
-    }, middle: {
-      host: COMMON.koa.host,
-      port: port || COMMON.koa.port
-    },
-    serviceSpecs: serviceSpecs,
-    fileServerPath: path.join('../client')
-  })
-  return server.start()
-}
 
 export function clear(server: Server) {
   let preperationService = <PreperationService>server.getService('preperation')

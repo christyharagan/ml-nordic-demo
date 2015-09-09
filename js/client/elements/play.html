@@ -6,7 +6,7 @@
 
     <paper-header-panel class="flex">
       <paper-toolbar>
-        <div>Premises</div>
+        <div>Given these statements</div>
       </paper-toolbar>
     </paper-header-panel>
 
@@ -16,7 +16,7 @@
       </template>
     </div>
 
-    <paper-dropdown-menu selected-item={{selectedAnswer}} label="Your answer">
+    <paper-dropdown-menu selected-item={{selectedAnswer}} label="Which of these follows?">
       <paper-menu class="dropdown-content">
         <template is="dom-repeat" items="{{formattedAnswers}}">
           <paper-item id="{{item.id}}">{{item.title}}</paper-item>
