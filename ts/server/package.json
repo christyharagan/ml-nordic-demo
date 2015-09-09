@@ -9,13 +9,13 @@
     "url": "https://github.com/christyharagan"
   },
   "scripts": {
-    "create": "node bin/build.js create",
-    "remove": "node bin/build.js remove",
-    "deploy": "node bin/build.js deploy",
-    "undeploy": "node bin/build.js undeploy",
-    "loadData": "node bin/build.js task loadData",
-    "test": "node bin/build.js task test",
-    "run": "node bin/build.js run"
+    "create": "node --harmony bin/build.js create",
+    "remove": "node --harmony bin/build.js remove",
+    "deploy": "node --harmony bin/build.js deploy",
+    "undeploy": "node --harmony bin/build.js undeploy",
+    "loadData": "node --harmony bin/build.js task loadData",
+    "test": "node --harmony bin/build.js task test",
+    "run": "node --harmony bin/build.js run"
   },
   "keywords": [
     "marklogic",
