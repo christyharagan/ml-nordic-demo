@@ -9,7 +9,7 @@ var COMMON = {
   appName: 'ml-nordic-demo',
   ml: {
     port: 8008,
-    host: 'christys-macbook-pro.local',
+    host: 'localhost',
     user: 'admin',
     password: 'passw0rd'
   },
@@ -32,8 +32,8 @@ exports.buildOptions = {
     model: databaseModel(COMMON)
   },
   middle: {
-    host: 'localhost',
-    port: 8080
+    host: COMMON.koa.host,
+    port: COMMON.koa.port
   },
   plugins: {
     uservices: [UServicesPlugin, {}]
