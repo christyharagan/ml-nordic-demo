@@ -31,22 +31,22 @@ npm install
 
 Create the database:
 ```
-npm create
+npm run create
 ```
 
 Deploy the assets:
 ```
-npm deploy
+npm run deploy
 ```
 
 Load the sample data:
 ```
-npm loadData
+npm run loadData
 ```
 
 Run the test server:
 ```
-npm run
+npm run run
 ```
 
 Now, to play the game, go to: ```http://[middle.hostname]:[middle.port]/play.html```, and to view the results, go to: ```http://[middle.hostname]:[middle.port]/results.html```.
@@ -62,11 +62,26 @@ In order to make changes to the server code, the following commands are necessar
 Undeploy the existing code:
 
 ```
-npm undeploy
+npm run undeploy
 ```
 
 Deploy the new code:
 
 ```
-npm deploy
+npm run deploy
+```
+
+Other commands
+--
+
+To remove the database:
+
+```
+npm run remove
+```
+
+To run the tests:
+
+```
+npm run test
 ```
