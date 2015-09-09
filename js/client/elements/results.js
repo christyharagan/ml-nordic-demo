@@ -26,7 +26,7 @@ Polymer({
     'onResults(results)',
     'onResultUpdates(resultUpdates)'
   ],
-  onResults() {
+  onResults: function() {
     if (this.results && this.formattedAnswers) {
       var rows = []
       var self = this
@@ -37,13 +37,13 @@ Polymer({
       this.notifyPath('rows', [rows])
     }
   },
-  onResultUpdates() {
+  onResultUpdates: function() {
     if (this.results) {
       this.results[this.resultUpdates[0]] = this.resultUpdates[1]
       this.onResults()
     }
   },
-  onAnswers() {
+  onAnswers: function() {
     this.formattedAnswers = formatAnswers(this.answers)
     var columns = this.formattedAnswers.map(function(formattedAnswer) {
       return formattedAnswer.title

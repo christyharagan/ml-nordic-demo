@@ -52,10 +52,10 @@ Polymer({
     'onPremises(premises)',
     'onIsCorrect(isCorrect)'
   ],
-  onAnswers() {
+  onAnswers: function() {
     this.notifyPath('formattedAnswers', formatAnswers(this.answers))
   },
-  onPremises() {
+  onPremises: function() {
     function formatStatement(statement) {
       switch (statement.kind) {
         case StatementKind.PROPOSITION:
@@ -73,14 +73,14 @@ Polymer({
 
     this.notifyPath('formattedPremises', this.premises.map(formatStatement))
   },
-  onIsCorrect() {
+  onIsCorrect: function() {
     if (this.isCorrect) {
       this.notifyPath('answeredCorrectly', true)
     } else {
       this.notifyPath('answeredIncorrectly', true)
     }
   },
-  submit() {
+  submit: function() {
     this.notifyPath('hasAnswered', true)
     this.notifyPath('guess', [this.selectedAnswer.id])
   }
