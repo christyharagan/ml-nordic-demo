@@ -8,6 +8,15 @@
     "email": "christy.haragan.github@gmail.com",
     "url": "https://github.com/christyharagan"
   },
+  "scripts": {
+    "create": "node bin/build.js create",
+    "remove": "node bin/build.js remove",
+    "deploy": "node bin/build.js deploy",
+    "undeploy": "node bin/build.js undeploy",
+    "loadData": "node bin/build.js task loadData",
+    "test": "node bin/build.js task test",
+    "run": "node bin/build.js run"
+  },
   "keywords": [
     "marklogic",
     "demo",
@@ -18,7 +27,7 @@
     "ml-admin": "^0.3.0",
     "markscript-core": "^0.1.1",
     "markscript-koa": "^0.1.1",
-    "markscript-project": "^0.1.2",
+    "markscript-project": "^0.1.3",
     "ml-typescript-definitions": "^0.2.0",
     "markscript-uservices": "^0.1.1",
     "speckle": "^0.1.3",
