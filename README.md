@@ -10,12 +10,18 @@ The game itself, presents the user with premises (boolean statements asserted as
 
 There is then a second page showing a bar chart of all guesses made, which demonstrate the real-time updates as players make their choices.
 
-Installation and Preperation
+Installation and Preparation
 --
 
 You will need to have access to a MarkLogic instance, either locally, or on a AWS instance. You will need to know the host and port numbers. If you are creating the database you will need to know the admin username and password. If you already have one created, you'll need to know the application username and password.
 
-To install and prepare, check the code out and then choose either the ts folder (for the TypeScript version) or the js folder (for the JavaScript folder). Configure the ```server/markscriptfile.ts``` (or ```/server/markscriptfile.js```) file for your local settings (specifically, the COMMON value would need changing, in particular the host name, port numbers, and user name).
+To install and prepare, check the code out
+
+```
+git clone https://github.com/christyharagan/ml-nordic-demo
+```
+
+And then choose either the ts folder (for the TypeScript version) or the js folder (for the JavaScript folder). Configure the ```server/markscriptfile.ts``` (or ```/server/markscriptfile.js```) file for your local settings (specifically, the COMMON value would need changing, in particular the host name, port numbers, and user name).
 
 Then, from the command line, cd in the ```client``` folder and run:
 
