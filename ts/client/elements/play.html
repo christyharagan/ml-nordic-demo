@@ -10,13 +10,13 @@
       </paper-toolbar>
     </paper-header-panel>
 
-    <div>
+    <div class="flex">
       <template is="dom-repeat" items="{{formattedPremises}}">
         <paper-item>{{item}}</paper-item>
       </template>
     </div>
 
-    <paper-dropdown-menu selected-item={{selectedAnswer}} label="Which of these follows?">
+    <paper-dropdown-menu selected-item={{selectedAnswer}} label="Which of these follows?" class="flex">
       <paper-menu class="dropdown-content">
         <template is="dom-repeat" items="{{formattedAnswers}}">
           <paper-item id="{{item.id}}">{{item.title}}</paper-item>

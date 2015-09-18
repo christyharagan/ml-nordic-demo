@@ -69,6 +69,7 @@ export class MLNordicDemo {
     let OR = logic.uri('or')
     let IMPLIES_LEFT = logic.uri('leftImplies')
     let IMPLIES_RIGHT = logic.uri('rightImplies')
+
     return rule('negationTa')
       .when(a, is, T)
       .and(a, NOT, b)
